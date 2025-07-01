@@ -5,27 +5,23 @@ function updateDisplay() {
   display.textContent = currentInput;
 }
 
-function appendNumber(number) {
-  if (currentInput === '0' && number !== '.') {
-    currentInput = number;
+function append(value) {
+  if (currentInput === '0') {
+    currentInput = value;
   } else {
-    currentInput += number;
-  }
-  updateDisplay();
-}
-
-function appendOperator(operator) {
-  const lastChar = currentInput.slice(-1);
-  if ('+-*/'.includes(lastChar)) {
-    currentInput = currentInput.slice(0, -1) + operator;
-  } else {
-    currentInput += operator;
+    currentInput += value;
   }
   updateDisplay();
 }
 
 function clearDisplay() {
   currentInput = '0';
+  updateDisplay();
+}
+
+function backspace() {
+  currentInput = currentInput.slice(0, -1);
+  if (currentInput === '') currentInput = '0';
   updateDisplay();
 }
 
@@ -37,3 +33,4 @@ function calculate() {
   }
   updateDisplay();
 }
+
