@@ -24,7 +24,7 @@ body {
   animation: glitter 5s linear infinite;
 }
 
-.hellokitty1.png-img {
+.kitty-img {
   width: 90px;
   margin-bottom: 10px;
   filter: drop-shadow(2px 2px 2px #ffb6c1);
