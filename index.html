@@ -1,42 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Calculadora Hello Kitty</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Científica Hello Kitty</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="calculator">
-    <img src="hellokitty1.jpg" alt="Hello Kitty" class="kitty-img" />
-
+    <img src="https://i.imgur.com/S5L3kGV.png" alt="Hello Kitty" class="kitty-img" />
     <div class="display" id="display">0</div>
     <div class="buttons">
-      <button class="btn-clear" onclick="clearDisplay()">C</button>
-      <button class="btn-operator" onclick="appendOperator('/')">÷</button>
-      <button class="btn-operator" onclick="appendOperator('*')">×</button>
-      <button class="btn-operator" onclick="appendOperator('-')">−</button>
+      <button onclick="clearDisplay()" class="btn-clear">C</button>
+      <button onclick="append('(')">(</button>
+      <button onclick="append(')')">)</button>
+      <button onclick="backspace()">⌫</button>
 
-      <button class="btn-number" onclick="appendNumber('7')">7</button>
-      <button class="btn-number" onclick="appendNumber('8')">8</button>
-      <button class="btn-number" onclick="appendNumber('9')">9</button>
-      <button class="btn-operator" onclick="appendOperator('+')">+</button>
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('/')">/</button>
 
-      <button class="btn-number" onclick="appendNumber('4')">4</button>
-      <button class="btn-number" onclick="appendNumber('5')">5</button>
-      <button class="btn-number" onclick="appendNumber('6')">6</button>
-      <button class="btn-number" onclick="appendNumber('1')">1</button>
-      <button class="btn-number" onclick="appendNumber('2')">2</button>
-      <button class="btn-number" onclick="appendNumber('3')">3</button>
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('*')">*</button>
 
-      <button class="btn-number" onclick="appendNumber('0')">0</button>
-      <button class="btn-number" onclick="appendNumber('.')">.</button>
-      <button class="btn-equal" onclick="calculate()">=</button>
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('-')">-</button>
+
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="append('+')">+</button>
+
+      <button onclick="append('Math.PI')">π</button>
+      <button onclick="append('Math.E')">e</button>
+      <button onclick="append('**2')">x²</button>
+      <button onclick="append('**')">^</button>
+
+      <button onclick="append('Math.sqrt(')">√</button>
+      <button onclick="append('Math.log10(')">log</button>
+      <button onclick="append('Math.log(')">ln</button>
+      <button onclick="append('Math.sin(')">sin</button>
+      <button onclick="append('Math.cos(')">cos</button>
+      <button onclick="append('Math.tan(')">tan</button>
     </div>
   </div>
 
-  <script src="código.js"></script>
+  <script>
+    let display = document.getElementById('display');
+    let currentInput = '0';
+
+    function updateDisplay() {
+      display.textContent = currentInput;
+    }
+
+    function append(value) {
+      if (currentInput === '0') {
+        currentInput = value;
+      } else {
+        currentInput += value;
+      }
+      updateDisplay();
+    }
+
+    function clearDisplay() {
+      currentInput = '0';
+      updateDisplay();
+    }
+
+    function backspace() {
+      currentInput = currentInput.slice(0, -1);
+      if (currentInput === '') currentInput = '0';
+      updateDisplay();
+    }
+
+    function calculate() {
+      try {
+        currentInput = eval(currentInput).toString();
+      } catch {
+        currentInput = 'Erro';
+      }
+      updateDisplay();
+    }
+  </script>
 </body>
 </html>
-
