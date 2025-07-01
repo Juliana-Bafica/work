@@ -1,85 +1,77 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Patrick Hand', cursive;
-  }
-  
-  body {
-    background: linear-gradient(145deg, #ffc0cb, #fff0f5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .calculator {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
-    width: 320px;
-    border: 4px solid #ff69b4;
-    position: relative;
-    text-align: center;
-  }
-  
-  .kitty-img {
-    width: 80px;
-    margin-bottom: 10px;
-  }
-  
-  .display {
-    background: #ffeef4;
-    color: #ff1493;
-    font-size: 2rem;
-    text-align: right;
-    padding: 1rem;
-    border-radius: 15px;
-    margin-bottom: 1rem;
-    height: 60px;
-    overflow-x: auto;
-    border: 2px solid #ffb6c1;
-  }
-  
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
-  }
-  
-  button {
-    padding: 1rem;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  button:hover {
-    transform: scale(1.1);
-  }
-  
-  .btn-operator {
-    background: #ff69b4;
-    color: #fff;
-  }
-  
-  .btn-clear {
-    background: #ff4d6d;
-    color: #fff;
-  }
-  
-  .btn-equal {
-    background: #f06292;
-    color: #fff;
-    grid-column: span 2;
-    border-radius: 20px;
-  }
-  
-  .btn-number {
-    background: #ffe4e1;
-    color: #d63384;
-  }
-  
+  box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+}
+
+body {
+  background: linear-gradient(145deg, #ffc0cb, #fff0f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background: #fff0f8;
+  padding: 2rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+  width: 400px;
+  border: 5px double #ff69b4;
+  position: relative;
+  text-align: center;
+  animation: glitter 5s linear infinite;
+}
+
+.kitty-img {
+  width: 90px;
+  margin-bottom: 10px;
+  filter: drop-shadow(2px 2px 2px #ffb6c1);
+}
+
+.display {
+  background: #ffeef4;
+  color: #ff1493;
+  font-size: 2rem;
+  text-align: right;
+  padding: 1rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  height: 60px;
+  overflow-x: auto;
+  border: 2px solid #ffb6c1;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #ffe4e1;
+  color: #d63384;
+  box-shadow: 0 3px 8px rgba(255, 105, 180, 0.3);
+}
+
+button:hover {
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 5px 12px rgba(255, 105, 180, 0.5);
+}
+
+.btn-clear {
+  background: #ff4d6d;
+  color: #fff;
+}
+
+@keyframes glitter {
+  0%, 100% { box-shadow: 0 0 10px #fff0f8; }
+  50% { box-shadow: 0 0 20px #ffb6c1; }
+}
