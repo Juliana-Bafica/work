@@ -58,7 +58,7 @@ button {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   background: #ffe4e1;
   color: #d63384;
-  box-shadow: 0 3px 8px rgba(255, 105, 180, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
