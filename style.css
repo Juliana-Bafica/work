@@ -47,6 +47,8 @@ body {
   border: 2px solid #ffb6c1;
 }
 
+}
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
