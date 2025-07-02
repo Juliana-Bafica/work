@@ -55,7 +55,13 @@ button {
   background: #ffe4e1;
   color: #d63384;
   box-shadow: 0 3px 8px rgba(255, 105, 180, 0.3);
-  aspect-ratio: 1 / 1;
+    width: 100%; /* Permite que o botão ocupe o espaço disponível na célula do grid */
+  aspect-ratio: 1 / 1; /* Garante que a altura seja igual à largura, formando um quadrado */
+  display: flex; /* Habilita flexbox para centralizar conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
 }
 
 button:hover {
