@@ -48,7 +48,7 @@ body {
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 0.75rem;
 }
 
@@ -87,7 +87,7 @@ button:hover {
 .btn-igual {
   background: #ff4d6d;
   color: #fff;
-  grid-column: span 2;
+  grid-column: span 3;
   border-radius: 20px;
 }
 
@@ -100,6 +100,9 @@ button:hover {
   .calculator {
     width: 90%;
     padding: 1rem;
+  }
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
   }
   button {
     padding: 0.8rem;
@@ -115,5 +118,6 @@ button:hover {
   0%, 100% { box-shadow: 0 0 10px #fff0f8; }
   50% { box-shadow: 0 0 20px #ffb6c1; }
 }
+
 
 
