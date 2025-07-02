@@ -14,11 +14,11 @@ body {
 
 .calculator {
   background: #fff;
-  padding: 2rem;
+  padding: 20px;
   border-radius: 30px;
   box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
   width: 400px;
-  heigth:300px; 
+  heigth:auto; 
   border: 5px double #ff69b4;
   position: relative;
   text-align: center;
