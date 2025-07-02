@@ -25,9 +25,9 @@ body {
 }
 
 .kitty-img {
-  width: 90px;
+  width: 60px;
   margin-bottom: 10px;
-  filter: drop-shadow(2px 2px 2px #ffb6c1);
+ 
 }
 
 .display {
