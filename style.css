@@ -73,6 +73,11 @@ button:hover {
     color: #fff;
 }
 
+.btn-opr{
+   background : #ff69b4;
+    color: #fff;
+}
+
 .btn-opr1{
    color: #fff;
   background: #f06292;
