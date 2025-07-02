@@ -73,13 +73,18 @@ button:hover {
     color: #fff;
 }
 
+.btn-opr1{
+   color: #fff;
+  background: #f06292;
+}
+
 .btn-number{
   background: #ffe4e1;
     color: #d63384;
 }
 
 .btn-igual{
-  background: #f06292;
+  background: #ff4d6d;
     color: #fff;
     grid-column: span 2;
     border-radius: 20px;
