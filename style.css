@@ -13,7 +13,7 @@ body {
 }
 
 .calculator {
-  background: #fff0f8;
+  background: #fff;
   padding: 2rem;
   border-radius: 30px;
   box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
@@ -24,11 +24,6 @@ body {
   animation: glitter 5s linear infinite;
 }
 
-.kitty-img {
-  width: 90px;
-  margin-bottom: 10px;
-  filter: drop-shadow(2px 2px 2px #ffb6c1);
-}
 
 .display {
   background: #ffeef4;
@@ -66,11 +61,29 @@ button:hover {
   box-shadow: 0 5px 12px rgba(255, 105, 180, 0.5);
 }
 
-.btn-clear {
+
+.btn-opr{
+background : #ff69b4;
+color: #fff;
+}
+
+.btn-apg{
   background: #ff4d6d;
   color: #fff;
 }
 
+.btn-opr1{
+  background: #f06292;
+}
+
+.btn-igual{
+     background: #ff4d6d;
+    color: #fff;
+    grid-column: span 2;
+    border-radius: 20px;
+}
+
+.
 @keyframes glitter {
   0%, 100% { box-shadow: 0 0 10px #fff0f8; }
   50% { box-shadow: 0 0 20px #ffb6c1; }
