@@ -42,7 +42,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
-  border-radius: 50%;
+
 }
 
 button {
@@ -55,6 +55,7 @@ button {
   background: #ffe4e1;
   color: #d63384;
   box-shadow: 0 3px 8px rgba(255, 105, 180, 0.3);
+  aspect-ratio: 1 / 1;
 }
 
 button:hover {
