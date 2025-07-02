@@ -71,6 +71,16 @@ button:hover {
   color: #fff;
 }
 
+.btn{
+  background : #ff69b4;
+    color: #fff;
+}
+
+.btn-number{
+  background: #ffe4e1;
+    color: #d63384;
+}
+
 @keyframes glitter {
   0%, 100% { box-shadow: 0 0 10px #fff0f8; }
   50% { box-shadow: 0 0 20px #ffb6c1; }
